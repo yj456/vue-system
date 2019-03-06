@@ -4,8 +4,15 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import ElementUI from 'element-ui'
+import axios from 'axios'
+import api from './api/index'
 
 Vue.use(ElementUI)
+
+axios.defaults.crossDomain = true
+axios.defaults.withCredentials = true
+// 将API方法绑定到全局
+Vue.prototype.$api = api
 
 Vue.config.productionTip = false
 
