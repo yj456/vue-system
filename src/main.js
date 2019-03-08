@@ -6,6 +6,8 @@ import router from './router'
 import ElementUI from 'element-ui'
 import axios from 'axios'
 import api from './api/index'
+import './assets/styles/reset.css'
+import './assets/styles/reorderStyle.css'
 
 Vue.use(ElementUI)
 
@@ -15,6 +17,18 @@ axios.defaults.withCredentials = true
 Vue.prototype.$api = api
 
 Vue.config.productionTip = false
+
+router.beforeEach((to, from, next) => {
+  if (to.path === '/login') {
+    window.sessionStorage.removeItem('user')
+  }
+  let user = JSON.parse(window.sessionStorage.getItem('user'))
+  if (!user && to.path !== '/login') {
+    next({ path: '/login' })
+  } else {
+    next()
+  }
+})
 
 /* eslint-disable no-new */
 new Vue({

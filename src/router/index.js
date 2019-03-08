@@ -1,18 +1,26 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld,
-      children: [
-        {}
-      ]
+      path: '/login',
+      component: () => import('@/views/login'),
+      name: '',
+      hidden: true
+    },
+    {
+      path: '/home',
+      name: 'home',
+      component: () => import('@/views/home/Home'),
+      children: []
+    },
+    {
+      path: '*',
+      hidden: true,
+      redirect: { path: '/404' }
     }
   ]
 })

@@ -1,0 +1,36 @@
+.login-form .el-form-item__label{
+  color: #ffffff;
+  line-height: 32px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.login-form .el-form-item__content{
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 20px !important;
+}
+
+.form-input .el-input__inner{
+  width: 200px;
+  height: 32px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  padding: 0 10px;
+}
+
+.login-form .el-button{
+  width: 100px;
+  height: 32px;
+  color: #fff;
+  background-color: #409eff;
+  border-radius: 4px;
+  margin-top: 50px;
+  cursor: pointer;
+}
+
+.login-form .el-form-item__error{
+  color: #f56c6c;
+}
