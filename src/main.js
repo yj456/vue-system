@@ -8,6 +8,8 @@ import axios from 'axios'
 import api from './api/index'
 import './assets/styles/reset.css'
 import './assets/styles/reorderStyle.css'
+import './assets/styles/global.css'
+import store from './store/index'
 
 Vue.use(ElementUI)
 
@@ -34,6 +36,7 @@ router.beforeEach((to, from, next) => {
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })

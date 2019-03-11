@@ -8,7 +8,6 @@ export default new Router({
     {
       path: '/login',
       component: () => import('@/views/login'),
-      name: '',
       hidden: true
     },
     {
