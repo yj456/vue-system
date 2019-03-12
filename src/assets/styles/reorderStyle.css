@@ -1,6 +1,6 @@
 .login-form .el-form-item__label{
   color: #ffffff;
-  line-height: 32px;
+  line-height: 42px;
   vertical-align: middle;
   display: inline-block;
 }
@@ -13,7 +13,7 @@
 
 .form-input .el-input__inner{
   width: 200px;
-  height: 32px;
+  height: 42px;
   border: 1px solid #cccccc;
   border-radius: 4px;
   box-sizing: border-box;
@@ -29,8 +29,14 @@
   border-radius: 4px;
   margin-top: 50px;
   cursor: pointer;
+  border: none;
+  line-height: 0;
 }
 
 .login-form .el-form-item__error{
   color: #f56c6c;
+}
+
+.header-dropdown{
+  margin: 22px 0 5px 0 !important;
 }

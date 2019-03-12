@@ -7,6 +7,9 @@
       <div class="header">
         <home-header></home-header>
       </div>
+      <div class="content-box">
+
+      </div>
     </div>
   </div>
 </template>
@@ -87,5 +90,12 @@ export default {
 .content-activity-collapse {
   width: 100%;
 }
-
+.content-box{
+  background: #F5F6FA;
+  display: flex;
+  flex-flow: column;
+  box-sizing: border-box;
+  width: 100%;
+  height: calc(100% - 66px);
+}
 </style>
