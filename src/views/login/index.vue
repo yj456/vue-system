@@ -18,15 +18,17 @@
 <script>
 export default {
   data () {
-    var validatePass = (rule, value, callback) => {
-      console.log(value)
-      console.log(rule)
-      if (value === '') {
-        callback(new Error('请输入密码'))
+    const validateUsername = (rule, value, callback) => {
+      if (!value) {
+        callback(new Error('请输入正确的用户名'))
       } else {
-        if (this.loginForm.password !== '') {
-          this.$refs.loginForm.validateField('password')
-        }
+        callback()
+      }
+    }
+    const validatePassword = (rule, value, callback) => {
+      if (value.length < 6) {
+        callback(new Error('请输入正确密码'))
+      } else {
         callback()
       }
     }
@@ -38,10 +40,10 @@ export default {
 
       rules: {
         name: [
-          { message: '请输入用户名', trigger: 'blur' }
+          { validator: validateUsername, trigger: 'blur' }
         ],
         password: [
-          { validator: validatePass, trigger: 'blur' }
+          { validator: validatePassword, trigger: 'blur' }
         ]
       }
     }

@@ -8,7 +8,7 @@
         <home-header></home-header>
       </div>
       <div class="content-box">
-
+        <router-view></router-view>
       </div>
     </div>
   </div>

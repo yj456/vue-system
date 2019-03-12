@@ -14,7 +14,10 @@ export default new Router({
       path: '/home',
       name: 'home',
       component: () => import('@/views/home/Home'),
-      children: []
+      children: [
+        {path: '/echarts', name: 'echarts', component: () => import('@/views/echarts')},
+        {path: '/table', name: 'table', component: () => import('@/views/table')}
+      ]
     },
     {
       path: '*',

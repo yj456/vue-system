@@ -64,7 +64,7 @@ export default {
           id: 'navbar_echarts',
           icon: 'el-icon-picture',
           active: '',
-          index: '',
+          index: 'echarts',
           title: 'ECharts图',
           visible: true,
           subs: []
@@ -73,7 +73,7 @@ export default {
           id: 'navbar_table',
           icon: 'el-icon-star-on',
           active: '',
-          index: '',
+          index: 'table',
           title: '列表',
           visible: true,
           subs: []
