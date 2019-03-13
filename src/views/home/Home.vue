@@ -17,7 +17,13 @@
 <script>
 import HomeHeader from './components/Header'
 import HomeSildebar from './components/Sidebar'
+import bus from '@/utils/common/bus'
 export default {
+  data () {
+    return {
+      collapse: false
+    }
+  },
   components: {
     HomeHeader,
     HomeSildebar
@@ -51,6 +57,11 @@ export default {
         'content-activity-collapse': this.collapse && !pc
       }
     }
+  },
+  mounted () {
+    bus.$on('collapse', msg => {
+      this.collapse = msg
+    })
   }
 }
 </script>

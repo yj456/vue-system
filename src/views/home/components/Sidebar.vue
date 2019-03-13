@@ -1,6 +1,6 @@
 <template>
   <div class="sidebar">
-    <div class="logo-left">窝的中台</div>
+    <div class="logo-left" @click="collapseChage">窝的中台</div>
     <el-scrollbar class="sidebar-scrllbar">
       <el-menu
         :collapse-transition="false"
@@ -54,6 +54,7 @@
 </template>
 
 <script>
+import bus from '@/utils/common/bus'
 export default {
   data () {
     return {
@@ -90,6 +91,19 @@ export default {
       return this.$route.path.replace('/', '')
     }
 
+  },
+  methods: {
+    // 侧边栏折叠
+    collapseChage () {
+      this.collapse = !this.collapse
+      bus.$emit('collapse', this.collapse)
+    }
+  },
+  mounted () {
+    // 通过 Event Bus 进行组件间通信，来折叠侧边栏
+    bus.$on('collapse', msg => {
+      this.isCollapse = msg
+    })
   }
 }
 </script>
