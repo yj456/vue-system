@@ -1,5 +1,5 @@
 <template>
-  <div></div>
+  <div class="echarts-contanier"></div>
 </template>
 
 <script>
@@ -13,5 +13,9 @@ export default {
 </script>
 
 <style scoped>
-
+.echarts-contanier{
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
 </style>
