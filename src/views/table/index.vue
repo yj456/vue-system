@@ -60,6 +60,12 @@ export default {
           money: 100000000,
           aptitudes: '优',
           address: '上海市普陀区金沙江路 1516 弄'
+        }, {
+          date: '2016-05-05',
+          name: '王小虎',
+          money: 1000000000,
+          aptitudes: '优',
+          address: '上海市普陀区金沙江路 1520 弄'
         }]
     }
   },
