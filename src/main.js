@@ -11,8 +11,10 @@ import './assets/styles/reset.css'
 import './assets/styles/reorderStyle.css'
 import './assets/styles/global.css'
 import store from './store/index'
+import echarts from 'echarts'
 
 Vue.use(ElementUI)
+Vue.prototype.$echarts = echarts
 
 axios.defaults.crossDomain = true
 axios.defaults.withCredentials = true
