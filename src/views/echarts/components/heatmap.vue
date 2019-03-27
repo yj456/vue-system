@@ -1,5 +1,5 @@
 <template>
-  <div>饼图</div>
+  <div>热力图</div>
 </template>
 
 <script>

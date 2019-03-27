@@ -1,5 +1,5 @@
 <template>
-  <div>饼图</div>
+  <div>旭日图</div>
 </template>
 
 <script>
