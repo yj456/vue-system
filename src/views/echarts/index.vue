@@ -1,11 +1,17 @@
 <template>
-  <div class="echarts-contanier"></div>
+  <div class="echarts-contanier">
+    <radar></radar>
+  </div>
 </template>
 
 <script>
+import Radar from './components/radar'
 export default {
   data () {
     return {}
+  },
+  components: {
+    Radar
   },
   methods: {},
   mounted () {}
